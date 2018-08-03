@@ -1,0 +1,350 @@
+/* You can add global styles to this file, and also import other style files */
+@media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .itoolcontainer,
+    .main-container {
+        -webkit-transform: translateX(-100%) rotate(-90deg);
+        -moz-transform: translateX(-100%) rotate(-90deg);
+        -ms-transform: translateX(-100%) rotate(-90deg);
+        -o-transform: translateX(-100%) rotate(-90deg);
+        transform: translateX(-100%) rotate(-90deg);
+        -webkit-transform-origin: top right;
+        -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+        -o-transform-origin: top right;
+        transform-origin: top right;
+        overflow: hidden;
+    }
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    padding:0px;
+    margin:0px;
+    /*width:1024px;*/
+    /*height:704px;*/
+    width:100%;
+    height:100%;
+    /*border:1px solid gray;*/
+    box-sizing: border-box;
+    overflow:hidden;
+}
+#side-button-holder{
+    position:absolute;
+    width:40px;
+    height:160px;
+    right:20px;
+    bottom:150px;
+}
+.button div{
+    position: relative;
+    left: 2px;
+    font-weight: bold;
+    font-size: 50px;
+}
+#nav-holder-center{
+    position: relative;
+    width: 165px;
+    height: 56px;
+    border-radius: 100px;
+    background-color: #ededed;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-family: SlatePro-Bk;
+    font-size: 24px;
+    box-sizing: border-box;
+    margin: -56px auto 12px;
+}
+
+#nav-holder .goto-page{
+    position: absolute;
+    top: 11px;
+    left: 42px;
+    width: 30px;
+    height: 32px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #dcdcdc;
+    text-align: right;
+    font-size: 24px;
+    font-family:SlatePro-Bk;
+}
+#nav-holder .goto-page:focus{
+    border: solid 1px #2c96dd;
+}
+#nav-holder .total-page{
+    position: absolute;
+    top: 14px;
+    width: 50px;
+    height: 32px;
+    right: 42px;
+    text-align: right;;
+}
+.canvas-wrapper{
+    position:relative;
+    margin:0 auto;
+}
+canvas{
+    /*position:absolute;*/
+}
+.disable{
+    opacity: .4;
+}
+.enable{
+    opacity: 1;
+}
+#itoolcontainer{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+}
+#pdf-panel-area{
+    /*height:704px;*/
+    /*position:relative;*/
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    /*overflow:hidden;*/
+    overflow:auto;
+}
+#pdf-panel-viewerContainer{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+}
+#pdf-panel-viewer{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+}
+.rotate-minus-90{
+    transform:rotate(-90deg);
+}
+.rotate-plus-90{
+    transform:rotate(90deg);
+}
+#objectWindow{
+    width:1024px;
+    height:702px;
+}
+/*Loader css begins*/
+.loading-div{
+    position:absolute;
+    top:0px;
+    left:0px;
+    /*width:1024px;
+    height:704px;*/
+    width:100%;
+    height:100%;
+    opacity:.75;
+    background:#fff;
+    z-index:1000;
+}
+.loader {
+    position:absolute;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    z-index:2;
+    margin-left:calc(50% - 77px);
+    top:calc(50% - 77px);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/*Loader css ends*/
+
+#pdf-controls-panel{
+    position:absolute;
+    width:100%;
+    /*top:650px;*/
+    left:0px;
+    bottom:0px;
+    height:0px;
+}
+#pdf-workmat-area{
+    position:absolute;
+    top:0px;
+    /*top:300px;*/
+    left:0px;
+    /*width:1024px;
+    height:672px;*/
+    width:100%;
+    height:100%;
+    opacity:0;
+    overflow:auto;
+}
+#stage{
+    position:relative;
+    overflow:visible;
+    width:1024px;
+    height:704px;
+    box-sizing:border-box;
+}
+#stage-container{
+    position:relative;
+    overflow:visible;
+    margin:0 0;
+    margin:0 auto;
+    border:0px solid transparent;
+    box-sizing: border-box
+}
+div.no_selection {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+#pdf-workmat-viewerContainer{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+    border: 1px solid gray;
+    box-sizing:border-box;
+}
+#pdf-workmat-viewer{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+
+/*scroll bar css begins*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(230, 230, 230, .3);
+    -webkit-border-radius: 10px;
+    border-radius: 6px
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: rgba(230, 230, 230, .8);
+    -webkit-box-shadow: inset 0 0 6px rgba(230, 230, 230, .5)
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(230, 230, 230, .4)
+}
+/*scroll bar css ends*/
+
+/*font begins*/
+@font-face{
+    font-family:"SlatePro-Bk";
+    src:url("assets/fonts/SlatePro-Bk.eot?#iefix");
+    src:url("assets/fonts/SlatePro-Bk.eot?#iefix") format("eot"),url("assets/fonts/SlatePro-Bk.woff2") format("woff2"),url("assets/fonts/SlatePro-Bk.woff") format("woff"),url("assets/fonts/SlatePro-Bk.ttf") format("truetype"),url("assets/fonts/SlatePro-Bk.svg#SlatePro-Bk") format("svg");
+}
+/*font ends*/
+
+/*Drawing tool override css Begins*/
+.dt-holder{
+    margin-top: 35px !important;
+    right: 30px !important;
+}
+/*Drawing tool override css Ends*/
+
+/*disable default text selection begins*/
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*disable default text selection ends*/
+#button-container{
+    position:absolute;
+    bottom:20px;
+    display:inline-block;
+    left:50%;
+    transform: translateX(-50%);
+    min-width:300px;
+}
+.top,.bottom{
+    min-width:150px;
+    margin:0 auto;
+}
+.button{
+    position: relative;
+    width: 30px;
+    height:30px;
+    border:1px solid black;
+    border-radius:18px;
+    cursor:pointer;
+    float:left;
+    margin:0 0 5px 5px;
+    overflow:hidden;
+    background-color: #4040400a;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+}
+.goto-page, .total-pages{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color:rgb(68, 227, 255);
+}
+.button.nav-prev div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/next.png") no-repeat 3px 1px;
+    transform: rotate(180deg);
+    background-size: 28px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.button.nav-next div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/next.png") no-repeat -1px 1px;
+    background-size: 28px;
+}
+.button.move div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/move.png") no-repeat -1px 1px;
+    background-size: 28px;
+}
+.button.turn-hori-vert.vert div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/turn-hori.png") no-repeat -1px 1px;
+    background-size: 28px;
+}
+.button.turn-hori-vert.hori div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/turn-vert.png") no-repeat -1px 1px;
+    background-size: 28px;
+}
+.button.plus div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/plus.png") no-repeat -1px 1px;
+    background-size: 28px;
+}
+.button.minus div{
+    width:100%;
+    height:100%;
+    background: url("assets/images/pngs/minus.png") no-repeat -1px 1px;
+    background-size: 28px;
+}

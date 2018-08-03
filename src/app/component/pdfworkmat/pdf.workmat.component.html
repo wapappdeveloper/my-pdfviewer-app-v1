@@ -1,0 +1,19 @@
+<div id="pdf-workmat-area">
+    <div id="pdf-workmat-viewerContainer" [style.width.px]="viewerContainerWidth" [style.height.px]="viewerContainerHeight" [style.position]="positionStyle" [style.left.px]="leftStyle" [class.rotate-plus-90]="rotatePlus90Degree" [class.rotate-minus-90]="rotateMinus90Degree" [style.transform-origin]="transformOrigin">
+        <div id="pdf-workmat-viewer" [style.width.px]="viewerWidth" [style.height.px]="viewerHeight" [style.margin-top.px]="viewerTopPosition">
+            <div id="stage-container" class="svg-wrapper" [style.width.px]="workmatWidth" [style.height.px]="workmatHeight">
+                <!--svg id="stage" data-ur="stage" [style.width.px]="workmatWidth" [style.height.px]="workmatHeight" ></svg-->
+                <!--<svg id="stage" data-ur="stage" data-dt="stage" class="stage" viewBox="0 0 950 605" preserveAspectRatio="xMinYMin meet" role='img' [style.left.px]="alignLeftWorkmat" [style.width.px]="workmatWidth" [style.height.px]="workmatHeight">-->
+                <svg id="stage" data-ur="stage" data-dt="stage" class="stage" viewBox="0 0 1024 1325" preserveAspectRatio="xMinYMin meet" role="img" [style.left.px]="alignLeftWorkmat" [style.width.px]="workmatWidth" [style.height.px]="workmatHeight">
+                    <!--<path fill="none" id="pen0" stroke="#000000" d="M 112 39 l 1 0 l 3 0 l 3 1 l 6 4 l 6 3 l 7 4 l 7 4 l 9 4 l 8 2 l 10 6 l 12 4 l 18 8 l 24 11 l 30 12 l 31 14 l 9 25 l -4 -3 l -8 -4 l -4 -3 l -4 -2 l -2 -2 l -5 -4 l -4 -2 l -4 -3 l -2 -2 l -2 -1 l -1 -1 l -1 -1 l -1 -1 l -1 -1 l -1 -2 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l 248 97" style="stroke-width: 3; stroke-linecap: round;visibility:visible" class="shape pen"></path>-->
+                    <rect x="0" y="0" width="30" height="30" stroke="black" fill="white" stroke-width="1"/>
+                    <circle id="circlered" cx="386" cy="311" r="65" stroke="red" fill="transparent" stroke-width="5"/>
+                    <!--<path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>-->
+                    <rect *ngFor="let value of loopElem; let i = index" x="0" y="100" [style.y]="i * 100" width="30" height="30" stroke="black" fill="white" fill-opacity="1" stroke-width="5">
+                        <text x="0" y="0">Text in SVG</text>
+                    </rect>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+
+<div class="loading-div">
+	<div class="loader"></div>
+</div>
+<div id="itoolcontainer">
+	<pdf-panel (emitFromPdfPanel)="triggerFromPdfPanel($event)" [parentInstance]="parentInstance"></pdf-panel>
+	<pdf-workmat (emitFromPdfWorkmat)="triggerFromPdfWorkmat($event)" [parentInstance]="parentInstance"></pdf-workmat>
+	<pdf-controls (emitFromPdfControl)="triggerFromPdfControl($event)" [parentInstance]="parentInstance"></pdf-controls>
+</div>

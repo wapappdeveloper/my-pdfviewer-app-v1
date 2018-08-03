@@ -1,0 +1,34 @@
+<div id="pdf-controls-panel">
+    <!--<div id="side-button-holder">
+        <div class="button move" (click)="movePageToggle($event)" (touchend)="movePageToggle($event)" [class.disable]="disableMove" [class.enable]="!disableMove"><div class="no_selection"></div></div>
+        <div class="button turn-hori-vert" (click)="turnPageHorizontalVertical($event)" (touchend)="turnPageHorizontalVertical($event)" [class.disable]="disableturnHorVert" [class.enable]="!disableturnHorVert"><div class="no_selection"></div></div>
+        <div class="button plus" (click)="zoomInPage($event)" (touchend)="zoomInPage($event)" [class.disable]="disablezoomIn" [class.enable]="!disablezoomIn"><div class="no_selection"></div></div>
+        <div class="button minus" (click)="zoomOutPage($event)" (touchend)="zoomOutPage($event)" [class.disable]="disablezoomOut" [class.enable]="!disablezoomOut"><div class="no_selection"></div></div>
+        <div class="button undo" (click)="undoAction($event)" (touchend)="undoAction($event)" [class.disable]="disableundo" [class.enable]="!disableundo"><div class="no_selection"></div></div>
+        <div class="button redo" (click)="redoAction($event)" (touchend)="zooredoActionmOutPage($event)" [class.disable]="disableredo" [class.enable]="!disableredo"><div class="no_selection"></div></div>
+        <div class="button clearall" (click)="clearAllAction($event)" (touchend)="clearAllAction($event)" [class.disable]="disableclearAll" [class.enable]="!disableclearAll"><div class="no_selection"></div></div>
+    </div>-->
+    <!--<div id="coltrols-holder">
+        <div id="nav-holder-center">
+            <div id="nav-holder">
+                <div class="nav-prev disable-select" [class.disable]="disablePrev" [class.enable]="!disablePrev" (click)="loadPagePrev($event)" (touchend)="loadPagePrev($event)"></div>
+                <input class="goto-page disable-select" (change)="loadPageByPageNo($event)" [value]="currentPageNumber" /><div class="total-page">of {{totalPageNumber}}</div>
+                <div class="nav-next disable-select" [class.disable]="disableNext" [class.enable]="!disableNext" (click)="loadPageNext($event)" (touchend)="loadPageNext($event)"></div>
+            <div>
+        </div>
+    </div>-->
+    <div id="button-container">
+        <div class="top">
+            <div class="button nav-prev" [class.disable]="disablePrev" [class.enable]="!disablePrev" (click)="loadPagePrev($event)" (touchend)="loadPagePrev($event)"><div class="no_selection"></div></div>
+            <div class="button current-page"><input class="goto-page disable-select" (change)="loadPageByPageNo($event)" [value]="currentPageNumber" /></div>
+            <div class="button no-of-pages"><input class="total-pages" disabled [value]="totalPageNumber" /></div>
+            <div class="button nav-next" [class.disable]="disableNext" [class.enable]="!disableNext" (click)="loadPageNext($event)" (touchend)="loadPageNext($event)"><div class="no_selection"></div></div>
+        </div>
+        <div class="bottom">
+            <div class="button turn-hori-vert" (click)="turnPageHorizontalVertical($event)" (touchend)="turnPageHorizontalVertical($event)" [class.disable]="disableturnHorVert" [class.enable]="!disableturnHorVert" [class.hori]="currentAngle != 0" [class.vert]="currentAngle == 0"><div class="no_selection"></div></div>
+            <div class="button plus" (click)="zoomInPage($event)" (touchend)="zoomInPage($event)" [class.disable]="disablezoomIn" [class.enable]="!disablezoomIn"><div class="no_selection"></div></div>
+            <div class="button minus" (click)="zoomOutPage($event)" (touchend)="zoomOutPage($event)" [class.disable]="disablezoomOut" [class.enable]="!disablezoomOut"><div class="no_selection"></div></div>
+            <div class="button move" (click)="movePageToggle($event)" (touchend)="movePageToggle($event)" [class.disable]="disableMove" [class.enable]="!disableMove"><div class="no_selection"></div></div>
+        </div>
+    </div>
+</div>

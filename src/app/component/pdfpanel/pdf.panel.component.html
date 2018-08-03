@@ -1,0 +1,12 @@
+<div id="pdf-panel-area" (window:resize)="onPdfPanelResize($event)">
+	<div id="pdf-title"></div>
+	<!--<canvas id="canvas" width="1024" height="1325"></canvas>-->
+	<div id="pdf-panel-viewerContainer" [style.width.px]="currentViewerContainerWidth" [style.height.px]="currentViewerContainerHeight" [style.position]="positionStyle" [style.left.px]="leftStyle" [class.rotate-plus-90]="rotatePlus90Degree" [class.rotate-minus-90]="rotateMinus90Degree" [style.transform-origin]="transformOrigin" ><!--[style.transform-origin]="transformOrigin"-->
+		<div id="pdf-panel-viewer" [style.width.px]="currentViewerWidth" [style.height.px]="currentViewerHeight" [style.margin-top.px]="viewerTopPosition">
+			<div *ngFor="let page of pages" id="canvas-container-{{page}}" class="canvas-wrapper" [style.width.px]="currentCanvasWrapperWidth" [style.height.px]="currentCanvasWrapperHeight">
+				<canvas id="canvas-{{page}}"></canvas>
+			</div>
+		<div>
+	</div>
+</div>
+
